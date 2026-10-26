@@ -38,16 +38,17 @@ module.exports = function(app, passport, db, ObjectId) {
 //update 
     app.put('/messages', (req, res) => {
       db.collection('messages')
-      .findOneAndUpdate({_id: new ObjectId(req.body.userID)}, {
-        $set: {
-          mood: req.body.mood,
-          msg:req.body.msg
-        }
-      }, {
-        returnOriginal:false
-      }, (err, result) => {
-        if (err) return res.send(err)
-        res.send(result)
+        .findOneAndUpdate({_id: new ObjectId(req.body.userID)}, 
+          {
+          $set: {
+              mood: req.body.mood,
+              msg:req.body.msg
+                }
+           }, {
+            returnOriginal:false
+              }, (err, result) => {
+            if (err) return res.send(err)
+            res.send(result)
       })
     })
 
