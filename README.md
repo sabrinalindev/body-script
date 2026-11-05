@@ -5,6 +5,8 @@ Besides that, it allows users to connect their own smart devides, so users can h
 
 ## Demo
 Check out here:
+https://body-script.onrender.com
+
 Live: COMING SOON! 
 
 ![Landing Page](public/img/LandingPage.jpeg)
